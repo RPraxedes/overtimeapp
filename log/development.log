@@ -2561,3 +2561,1420 @@ Processing by StaticController#homepage as HTML
 Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.3ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/app/models/application_record.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2019-08-28 14:27:48 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#homepage as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (1.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 2367ms (Views: 2345.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.self-66e741ea3c30f5dbef87449952d5e7a7e9f1f6c5015fa60fa1e2db9391ad3ba9.css?body=1" for ::1 at 2019-08-28 14:27:51 +0800
+Started GET "/admin" for ::1 at 2019-08-28 14:28:59 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (3.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (43.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (76.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (14.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (86.2ms)
+Completed 200 OK in 201ms (Views: 189.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/administrate/application.self-bce82e3fdd0368bc72315323da9813b36c50379f38ae60994617a6f47c829ec3.css?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/selectize.self-89bb259712ae6f2d043ed9c7ac47a4b50ff88611b6c8e1ed8effef2ccd75d21e.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/datetime_picker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/moment.self-dbfdfe43590c611f0c0daa853cd06098b822a96263c92920d70a8bc7f884e59a.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/administrate/components/date_time_picker.self-d779ef5a8e8e10d2fa290fe533e6af8cdc4c4b9e92ce0752d20b6c01822272e0.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/administrate/components/table.self-a3d8351581fece8850ef6f595fe6153bf4eacf098c075e5588de2d07ae56d4ba.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/administrate/application.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/assets/administrate/components/has_many_form.self-1f25789b95907cf69cffca6b436b523b4df0d94bdf8903ededdeced0ac7147d7.js?body=1" for ::1 at 2019-08-28 14:28:59 +0800
+Started GET "/admin/users/1" for ::1 at 2019-08-28 14:29:17 +0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (24.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_show.html.erb (40.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (52.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.1ms)
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:29:33 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.0ms)
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (4.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (19.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:29:34 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (12.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (18.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/posts" for ::1 at 2019-08-28 14:29:34 +0800
+Processing by Admin::PostsController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (80.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (90.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (8.9ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:29:39 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (11.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (17.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.0ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:33:12 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (9.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:33:13 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (14.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (2.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (29.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (30.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.4ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:33:14 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (3.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (9.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (20.1ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:33:15 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (5.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (17.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (19.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:33:19 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (4.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (10.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:38:56 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (11.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (19.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (21.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.7ms)
+Completed 200 OK in 74ms (Views: 42.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:39:04 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (22.2ms)
+Completed 200 OK in 57ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:40:45 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.1ms)
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (6.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (35.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (9.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (3.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (14.7ms)
+Completed 200 OK in 77ms (Views: 74.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:40:47 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.2ms)
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (6.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (15.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (29.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.8ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:40:48 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (5.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:41:34 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfYWNIjkICGyVKe2L4L09m56dR8k2fPTR4tKP25jNgwpYUo4MLD8x49IIVqIDgyoLp7RnLvUfd0qOqQHjd+QwA==", "admin_user"=>{"email"=>"admin@test.com", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (4.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (5.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.0ms)
+Completed 200 OK in 36ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:41:46 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfYWNIjkICGyVKe2L4L09m56dR8k2fPTR4tKP25jNgwpYUo4MLD8x49IIVqIDgyoLp7RnLvUfd0qOqQHjd+QwA==", "admin_user"=>{"email"=>"admin@test.com", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (5.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.0ms)
+Completed 200 OK in 61ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:41:54 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UXUoWVvGPzxip9aaDCpx7WZUwGLG0jBBs6OfYEvgOTpx4nRV45Lj2l+7UHarpomzJrBk4Vnfvk/eEnFYqFyf9g==", "admin_user"=>{"email"=>"admin@test.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:42:27 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfYWNIjkICGyVKe2L4L09m56dR8k2fPTR4tKP25jNgwpYUo4MLD8x49IIVqIDgyoLp7RnLvUfd0qOqQHjd+QwA==", "admin_user"=>{"email"=>"admin@test.com", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permitted_attribute' for nil:NilClass):
+  
+administrate (0.11.0) lib/administrate/base_dashboard.rb:45:in `block in permitted_attributes'
+administrate (0.11.0) lib/administrate/base_dashboard.rb:44:in `map'
+administrate (0.11.0) lib/administrate/base_dashboard.rb:44:in `permitted_attributes'
+administrate (0.11.0) app/controllers/administrate/application_controller.rb:136:in `resource_params'
+administrate (0.11.0) app/controllers/administrate/application_controller.rb:44:in `create'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.6ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__2328256917426211778_70179610580240 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.3ms)
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:42:40 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfYWNIjkICGyVKe2L4L09m56dR8k2fPTR4tKP25jNgwpYUo4MLD8x49IIVqIDgyoLp7RnLvUfd0qOqQHjd+QwA==", "admin_user"=>{"email"=>"admin@test.com", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (7.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (14.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.4ms)
+Completed 200 OK in 60ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:43:24 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfYWNIjkICGyVKe2L4L09m56dR8k2fPTR4tKP25jNgwpYUo4MLD8x49IIVqIDgyoLp7RnLvUfd0qOqQHjd+QwA==", "admin_user"=>{"email"=>"admin@test.com", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (1.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (7.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (9.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (8.9ms)
+Completed 200 OK in 51ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:43:29 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdYYHGakHcZo5bXKBXmu0ERwWGqFQx4eYmD9g3ME1y+tQUQQ3vDBIFX5Myai9VaOBJT86RpOkBAP0RO7kLhx4w==", "admin_user"=>{"email"=>"admin@test.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (7.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (17.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.8ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:43:38 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdYYHGakHcZo5bXKBXmu0ERwWGqFQx4eYmD9g3ME1y+tQUQQ3vDBIFX5Myai9VaOBJT86RpOkBAP0RO7kLhx4w==", "admin_user"=>{"email"=>"admin@test.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (20.5ms)
+Completed 200 OK in 59ms (Views: 42.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:43:39 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqhg6HfhiUqh5o40Ou8K86B7sN3WKKh4jajGAtdgifjqPzzkz7VVrJz6CNidY/Kt4J8UXkklJnbgGSg6NNwvNA==", "admin_user"=>{"email"=>"admin@test.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (7.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.7ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:46:05 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (2.2ms)
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (7.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (47.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (21.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (3.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 95ms (Views: 92.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:46:07 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.7ms)
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (3.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (9.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.7ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:46:08 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (4.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.5ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:46:20 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9H3c/ziuivCAPmNJJa439PlLKjJvN9byRYpLDCKFZYPU6oDzgPpWFr0i5aWCIs+qua+OsfA6WPwoO6U0wTnDTw==", "admin_user"=>{"email"=>"admin@admin.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (4.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (11.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.0ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/app/models/application_record.rb:1)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."type" IN ('AdminUser')[0m
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:48:03 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9H3c/ziuivCAPmNJJa439PlLKjJvN9byRYpLDCKFZYPU6oDzgPpWFr0i5aWCIs+qua+OsfA6WPwoO6U0wTnDTw==", "admin_user"=>{"email"=>"admin@admin.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (6.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (7.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.9ms)
+Completed 200 OK in 49ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:48:04 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z34LGyY0mg1vJVCj6hUCjFkZS5j/eVFIUFONoYIsl3FH6VcXnmBG61I51k9NmfrSGf3vG2B030Y94mOZYZAxvQ==", "admin_user"=>{"email"=>"admin@admin.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (4.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (13.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.7ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:48:54 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z34LGyY0mg1vJVCj6hUCjFkZS5j/eVFIUFONoYIsl3FH6VcXnmBG61I51k9NmfrSGf3vG2B030Y94mOZYZAxvQ==", "admin_user"=>{"email"=>"admin@admin.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.4ms)
+Completed 200 OK in 47ms (Views: 31.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:48:55 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (32.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (38.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.5ms)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/admin/posts" for ::1 at 2019-08-28 14:48:57 +0800
+Processing by Admin::PostsController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/belongs_to/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_index.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/text/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (74.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (84.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (12.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 120ms (Views: 117.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:48:58 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (3.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (8.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:48:58 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 1[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (9.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (14.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (19.7ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2019-08-28 14:48:59 +0800
+Processing by Admin::UsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (5.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (17.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (19.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (12.3ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2019-08-28 14:49:32 +0800
+Processing by Admin::UsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (29.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (41.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (45.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.0ms)
+Completed 200 OK in 88ms (Views: 70.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/users" for ::1 at 2019-08-28 14:49:48 +0800
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLj8nY0ewPzFgH5KGzpgjNrtiWVCDgsaja24shRsRS/oL6CRNUocGvic+Ka8tpjSmgkt5t0DhRTgHFaK99Dj4w==", "user"=>{"post_ids"=>[""], "email"=>"asda@asdf.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"User", "last_name"=>"Name", "type"=>"User"}, "commit"=>"Create User"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asda@asdf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (5.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (11.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (13.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 40ms (Views: 35.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:49:54 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.0ms)
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (17.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (13.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.3ms)
+Completed 200 OK in 56ms (Views: 49.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/admin_users/new" for ::1 at 2019-08-28 14:49:55 +0800
+Processing by Admin::AdminUsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (4.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (5.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:50:18 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/MoxlejXTgSxVUz25wwWB48ORpfm1ljprNvSJ+zJ8+XcXW2ZUIOS4oxJyhpAgO5Zz+riFHnb1ufBajwfD3VVKQ==", "admin_user"=>{"email"=>"admin@test.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.2ms)
+Completed 200 OK in 58ms (Views: 31.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:50:53 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/MoxlejXTgSxVUz25wwWB48ORpfm1ljprNvSJ+zJ8+XcXW2ZUIOS4oxJyhpAgO5Zz+riFHnb1ufBajwfD3VVKQ==", "admin_user"=>{"email"=>"admin@test.com", "encrypted_password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+Unpermitted parameter: encrypted_password
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (6.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 48ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/admin_users" for ::1 at 2019-08-28 14:50:57 +0800
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjPv2Cb398xZ2eEzY084d/VACmX/JZVICRBg08cljnYKpLPUnqMrKmTFZ9/Ew8AptaSu5mAoG0ZkoY7rJJkoug==", "admin_user"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "first_name"=>"Admin", "last_name"=>"User", "type"=>"AdminUser"}, "commit"=>"Create Admin user"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "admin@test.com"], ["encrypted_password", "$2a$11$mEZoqZ8RDudz0FrZMb3fOeSSDoT9TpmiF.Kdj586SkXtDh.geO7Pe"], ["first_name", "Admin"], ["last_name", "User"], ["type", "AdminUser"], ["created_at", "2019-08-28 06:50:57.476531"], ["updated_at", "2019-08-28 06:50:57.476531"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/admin_users/2
+Completed 302 Found in 109ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/admin_users/2" for ::1 at 2019-08-28 14:50:57 +0800
+Processing by Admin::AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') AND "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_show.html.erb (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (19.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.3ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/admin_users/2/edit" for ::1 at 2019-08-28 14:51:04 +0800
+Processing by Admin::AdminUsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') AND "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/edit.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (5.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/edit.html.erb within layouts/administrate/application (7.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (10.3ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/admin_users/2" for ::1 at 2019-08-28 14:53:46 +0800
+Processing by Admin::AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') AND "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 2], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_show.html.erb (1.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (16.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (2.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.6ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2019-08-28 14:53:47 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.0ms)
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = 2[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (28.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (35.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.7ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:53:47 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (1, 2)[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (18.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (23.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.1ms)
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/users/new" for ::1 at 2019-08-28 14:53:49 +0800
+Processing by Admin::UsersController#new as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_form.html.erb (5.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_form.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_form.html.erb (11.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (13.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.7ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (11.1ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/users" for ::1 at 2019-08-28 14:53:59 +0800
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"joswgRU1nUefGR1BsdiE9ZIECbMDfALIcxoKvPoZ1e2uHGyNrWFBoaIFm60WVHyr0uCtMJxxjMYeq+SEGaVzIQ==", "user"=>{"post_ids"=>[""], "email"=>"1234@1234.com", "password"=>"[FILTERED]", "first_name"=>"1234", "last_name"=>"5678", "type"=>"User"}, "commit"=>"Create User"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE 1=0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1234@1234.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "1234@1234.com"], ["encrypted_password", "$2a$11$yglSKKxdx3vxTEFfwHkrlup1K76kfmN8grEcHBthy7V5j5Fy4gZuS"], ["first_name", "1234"], ["last_name", "5678"], ["type", "User"], ["created_at", "2019-08-28 06:53:59.568159"], ["updated_at", "2019-08-28 06:53:59.568159"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users/3
+Completed 302 Found in 102ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/users/3" for ::1 at 2019-08-28 14:53:59 +0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE "posts"."user_id" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["user_id", 3], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_show.html.erb (2.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_show.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/date_time/_show.html.erb (0.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (14.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (8.9ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:54:01 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (1, 2, 3)[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/password/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (15.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (21.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.3ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2019-08-28 14:58:03 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (1, 2, 3)[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (39.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (70.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.7ms)
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.8ms)
+
+
