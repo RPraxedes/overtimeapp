@@ -5511,3 +5511,193 @@ Processing by Admin::UsersController#new as HTML
 Completed 200 OK in 129ms (Views: 111.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2019-08-28 15:48:04 +0800
+Processing by StaticController#homepage as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 15:48:04 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-66e741ea3c30f5dbef87449952d5e7a7e9f1f6c5015fa60fa1e2db9391ad3ba9.css?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/gritter.self-86104ae046aab8f5708e562e890c59491b8caf9bc6b1d9afd7acdfdcf0baf693.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/bootstrap.self-91405a85c7ea7ffc2407472f08a86cd29ba078b4e18f962931a4cf3270a7ba4d.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-08-28 15:48:04 +0800
+Started GET "/admin" for ::1 at 2019-08-28 15:48:07 +0800
+Processing by Admin::UsersController#index as HTML
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_search.html.erb (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" IN (1, 2, 3)[0m
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/has_many/_index.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/number/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/fields/string/_index.html.erb (0.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_collection.html.erb (26.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (32.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_stylesheet.html.erb (3.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_icons.erb (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_navigation.html.erb (1.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_flashes.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/administrate-0.11.0/app/views/administrate/application/_javascript.html.erb (9.4ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/administrate/application.self-bce82e3fdd0368bc72315323da9813b36c50379f38ae60994617a6f47c829ec3.css?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/selectize.self-89bb259712ae6f2d043ed9c7ac47a4b50ff88611b6c8e1ed8effef2ccd75d21e.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/moment.self-dbfdfe43590c611f0c0daa853cd06098b822a96263c92920d70a8bc7f884e59a.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/administrate/components/has_many_form.self-1f25789b95907cf69cffca6b436b523b4df0d94bdf8903ededdeced0ac7147d7.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/administrate/components/date_time_picker.self-d779ef5a8e8e10d2fa290fe533e6af8cdc4c4b9e92ce0752d20b6c01822272e0.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/administrate/components/table.self-a3d8351581fece8850ef6f595fe6153bf4eacf098c075e5588de2d07ae56d4ba.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/administrate/application.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/assets/datetime_picker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js?body=1" for ::1 at 2019-08-28 15:48:08 +0800
+Started GET "/" for ::1 at 2019-08-28 15:50:57 +0800
+Processing by StaticController#homepage as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 15:50:57 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-66e741ea3c30f5dbef87449952d5e7a7e9f1f6c5015fa60fa1e2db9391ad3ba9.css?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/gritter.self-86104ae046aab8f5708e562e890c59491b8caf9bc6b1d9afd7acdfdcf0baf693.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/bootstrap.self-91405a85c7ea7ffc2407472f08a86cd29ba078b4e18f962931a4cf3270a7ba4d.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-08-28 15:50:57 +0800
+Started GET "/admin" for ::1 at 2019-08-28 15:51:00 +0800
+Processing by Admin::UsersController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2019-08-28 15:54:39 +0800
+Processing by StaticController#homepage as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 15:54:39 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-66e741ea3c30f5dbef87449952d5e7a7e9f1f6c5015fa60fa1e2db9391ad3ba9.css?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/bootstrap.self-91405a85c7ea7ffc2407472f08a86cd29ba078b4e18f962931a4cf3270a7ba4d.js?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/gritter.self-86104ae046aab8f5708e562e890c59491b8caf9bc6b1d9afd7acdfdcf0baf693.js?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2019-08-28 15:54:39 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-08-28 15:54:40 +0800
+Started GET "/admin" for ::1 at 2019-08-28 15:54:41 +0800
+Processing by Admin::UsersController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2019-08-28 15:55:28 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/charizard/Documents/overtime-app-2/app/controllers/admin/application_controller.rb:10)
+Processing by Admin::UsersController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 15:55:28 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-28 15:55:38 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4jz0i/iVxykV5W5S0XxhiG3VfnZkUIBMsiugrDnOyhhPBHRHYBMA3FsRAPt2cR5l3e34H+kWostmPoSes2TGw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 103ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for ::1 at 2019-08-28 15:55:38 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 15:55:38 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-08-28 15:55:38 +0800
+Processing by StaticController#homepage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for ::1 at 2019-08-28 15:55:41 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-28 15:55:41 +0800
+Processing by StaticController#homepage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.2ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-28 15:55:42 +0800
+Processing by StaticController#homepage as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
