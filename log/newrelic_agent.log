@@ -1,0 +1,139 @@
+# Logfile created on 2019-08-28 12:19:46 +0800 by logger.rb/66358
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Environment: development
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : No known dispatcher detected.
+[2019-08-28 12:19:46 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Application: My Application (Development)
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing Net instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Finished instrumentation
+[2019-08-28 12:19:47 +0800 android-2b7e6dbfdcc596fd.localdomain (21107)] INFO : Starting Agent shutdown
+[2019-08-28 12:19:50 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:19:50 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:19:50 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Environment: development
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : No known dispatcher detected.
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Application: My Application (Development)
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing Net instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Finished instrumentation
+[2019-08-28 12:19:51 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Doing deferred dependency-detection before Rack startup
+[2019-08-28 12:19:53 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] ERROR : Invalid license key
+[2019-08-28 12:19:53 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2019-08-28 12:19:59 +0800 android-2b7e6dbfdcc596fd.localdomain (21126)] INFO : Starting Agent shutdown
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Environment: development
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : No known dispatcher detected.
+[2019-08-28 12:35:47 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Application: My Application (Development)
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing Net instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Finished instrumentation
+[2019-08-28 12:35:48 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Doing deferred dependency-detection before Rack startup
+[2019-08-28 12:35:49 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] ERROR : Invalid license key
+[2019-08-28 12:35:49 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2019-08-28 12:36:34 +0800 android-2b7e6dbfdcc596fd.localdomain (23216)] INFO : Starting Agent shutdown
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Environment: development
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : No known dispatcher detected.
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Application: My Application (Development)
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing Net instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Finished instrumentation
+[2019-08-28 12:37:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Doing deferred dependency-detection before Rack startup
+[2019-08-28 12:37:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] ERROR : Invalid license key
+[2019-08-28 12:37:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2019-08-28 12:39:15 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:39:15 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:39:15 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Environment: development
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : No known dispatcher detected.
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Application: My Application (Development)
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing Net instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Finished instrumentation
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Doing deferred dependency-detection before Rack startup
+[2019-08-28 12:39:16 +0800 android-2b7e6dbfdcc596fd.localdomain (23365)] INFO : Starting Agent shutdown
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Environment: development
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : No known dispatcher detected.
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Application: My Application (Development)
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing Net instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:43:39 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Finished instrumentation
+[2019-08-28 12:43:41 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] ERROR : Invalid license key
+[2019-08-28 12:43:41 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2019-08-28 12:43:45 +0800 android-2b7e6dbfdcc596fd.localdomain (23476)] INFO : Starting Agent shutdown
+[2019-08-28 12:44:00 +0800 android-2b7e6dbfdcc596fd.localdomain (23244)] INFO : Starting Agent shutdown
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Starting the New Relic agent in "development" environment.
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Reading configuration from config/newrelic.yml (/Users/charizard/Documents/overtime-app)
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : New Relic Agent Developer Mode enabled.
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Environment: development
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : No known dispatcher detected.
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Application: My Application (Development)
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing ActiveRecord 5 instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing Rails 3+ middleware instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing Net instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing deferred Rack::Builder instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing Rack::Builder middleware instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing ActiveJob instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing Rails 5 Controller instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing Rails 5 view instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Installing Rails 5 Action Cable instrumentation
+[2019-08-28 12:44:01 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Finished instrumentation
+[2019-08-28 12:44:03 +0800 android-2b7e6dbfdcc596fd.localdomain (23497)] INFO : Starting Agent shutdown

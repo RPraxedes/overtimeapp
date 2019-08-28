@@ -1,0 +1,1564 @@
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2019-08-28 12:58:39 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#homepage as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 401 Unauthorized in 28ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 12:58:39 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.9ms)
+Completed 500 Internal Server Error in 476ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csp_meta_tag' for #<#<Class:0x00007ff83e9ce080>:0x00007ff83b2f6288>
+Did you mean?  csrf_meta_tag
+               csrf_meta_tags):
+    3:   <head>
+    4:     <title>TimeTracker</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7: 
+    8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2992469760556227831_70352061989260'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1871540698188653794_70352053121560 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.6ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 12:58:59 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.css.scss to /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.scss. (called from _app_views_layouts_application_html_erb__2992469760556227831_70352053245160 at /Users/charizard/Documents/overtime-app/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.css.scss to /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.scss. (called from _app_views_layouts_application_html_erb__2992469760556227831_70352053245160 at /Users/charizard/Documents/overtime-app/app/views/layouts/application.html.erb:7)
+Completed 500 Internal Server Error in 1539ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00007ff83e9ce080>:0x00007ff83a251798>
+Did you mean?  javascript_path
+               javascript_tag):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2992469760556227831_70352053245160'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.1ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1871540698188653794_70352101315020 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (21.2ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:02:07 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-7c5e6e6f4374367e3727cd81d09096574bedf2eeea4ece7a6adba15e6507888c.css?body=1" for ::1 at 2019-08-28 13:02:07 +0800
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:04:42 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.css.scss to /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.scss. (called from _app_views_layouts_application_html_erb___3732000017390108532_70278352231240 at /Users/charizard/Documents/overtime-app/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.css.scss to /Users/charizard/.rvm/gems/ruby-2.6.3/gems/gritter-1.2.0/app/assets/stylesheets/gritter.scss. (called from _app_views_layouts_application_html_erb___3732000017390108532_70278352231240 at /Users/charizard/Documents/overtime-app/app/views/layouts/application.html.erb:7)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 1338ms (Views: 1319.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:06:52 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:07:41 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:07:50 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/application.css.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    4:     <title>TimeTracker</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__613172380821602555_70199172583640'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199182496320 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.0ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:07:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/application.css.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    4:     <title>TimeTracker</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__613172380821602555_70199174732360'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199179759000 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.0ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:07:54 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/application.css.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    4:     <title>TimeTracker</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__613172380821602555_70199204723980'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.7ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199175090280 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.1ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:08:25 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/application.css.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    4:     <title>TimeTracker</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__613172380821602555_70199175371060'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199173814960 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.9ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:09:18 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 1617ms (Views: 1616.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d89c2a56ec0a3afdeac76e1c8517e3ca66f71998ecaeeb851a12cf7888cc9dad.css?body=1" for ::1 at 2019-08-28 13:09:20 +0800
+Started GET "/assets/bootstrap.self-91405a85c7ea7ffc2407472f08a86cd29ba078b4e18f962931a4cf3270a7ba4d.js?body=1" for ::1 at 2019-08-28 13:09:20 +0800
+Started GET "/posts" for ::1 at 2019-08-28 13:09:44 +0800
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:09:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-28 13:09:48 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGElWi8l9lj0Zy+gMjbXXC1FfmpqPBo3UXowIrn2/yHI5A1meQgW57pVTQ+ek0tAkMtgnXX2x4BjAM+oMo9RPA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Employee'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite User.inheritance_column to use another column for that information.):
+  
+activerecord (5.0.7.2) lib/active_record/inheritance.rb:182:in `rescue in find_sti_class'
+activerecord (5.0.7.2) lib/active_record/inheritance.rb:175:in `find_sti_class'
+activerecord (5.0.7.2) lib/active_record/inheritance.rb:163:in `discriminate_class_for_record'
+activerecord (5.0.7.2) lib/active_record/persistence.rb:67:in `instantiate'
+activerecord (5.0.7.2) lib/active_record/querying.rb:50:in `block (2 levels) in find_by_sql'
+activerecord (5.0.7.2) lib/active_record/result.rb:52:in `block in each'
+activerecord (5.0.7.2) lib/active_record/result.rb:52:in `each'
+activerecord (5.0.7.2) lib/active_record/result.rb:52:in `each'
+activerecord (5.0.7.2) lib/active_record/querying.rb:50:in `map'
+activerecord (5.0.7.2) lib/active_record/querying.rb:50:in `block in find_by_sql'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.7.2) lib/active_record/querying.rb:49:in `find_by_sql'
+activerecord (5.0.7.2) lib/active_record/relation.rb:706:in `exec_queries'
+activerecord (5.0.7.2) lib/active_record/relation.rb:583:in `load'
+activerecord (5.0.7.2) lib/active_record/relation.rb:260:in `records'
+activerecord (5.0.7.2) lib/active_record/relation.rb:256:in `to_a'
+activerecord (5.0.7.2) lib/active_record/relation/finder_methods.rb:563:in `find_nth_with_limit'
+activerecord (5.0.7.2) lib/active_record/relation/finder_methods.rb:592:in `find_nth_with_limit_and_offset'
+activerecord (5.0.7.2) lib/active_record/relation/finder_methods.rb:545:in `find_nth'
+activerecord (5.0.7.2) lib/active_record/relation/finder_methods.rb:122:in `first'
+orm_adapter (0.5.0) lib/orm_adapter/adapters/active_record.rb:22:in `find_first'
+devise (4.7.0) lib/devise/models/authenticatable.rb:275:in `find_first_by_auth_conditions'
+devise (4.7.0) lib/devise/models/authenticatable.rb:271:in `find_for_authentication'
+devise (4.7.0) lib/devise/models/database_authenticatable.rb:232:in `find_for_database_authentication'
+devise (4.7.0) lib/devise/strategies/database_authenticatable.rb:10:in `authenticate!'
+warden (1.2.8) lib/warden/strategies/base.rb:54:in `_run!'
+warden (1.2.8) lib/warden/proxy.rb:369:in `block in _run_strategies_for'
+warden (1.2.8) lib/warden/proxy.rb:365:in `each'
+warden (1.2.8) lib/warden/proxy.rb:365:in `_run_strategies_for'
+warden (1.2.8) lib/warden/proxy.rb:335:in `_perform_authentication'
+warden (1.2.8) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.7.0) app/controllers/devise/sessions_controller.rb:19:in `create'
+actionpack (5.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.7.2) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.2) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199205423120 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (22.4ms)
+Started GET "/users/sign_up" for ::1 at 2019-08-28 13:10:08 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:11:11 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:11:28 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-28 13:11:31 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:11:51 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UFR/Zu/9kF5jUnzn2RVDg5nIIoj6yaxaCj7I9MZVBXXI0VdaudBw4S1gHkh1sN+fJEY8f+UDce04RDd+TSyraA==", "user"=>{"email"=>"1234@1234.com", "first_name"=>"1234", "last_name"=>"5678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1234@1234.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 18.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:12:04 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t641lgJP2f+PRxWacSCqXdCfkSaBbIjhV76IqVmPjcsvKx2qVGI5QMF1dzXdhTZBbRGP0Z6mVVZlxHcj0vYj1g==", "user"=>{"email"=>"1234@1234.com", "first_name"=>"asdasd", "last_name"=>"asdasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1234@1234.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE "posts" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "date" date, "rationale" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts" USING btree ("user_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "users" CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "first_name" character varying, "last_name" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE "posts" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "date" date, "rationale" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts" USING btree ("user_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE "users" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "first_name" character varying, "last_name" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-08-28 05:15:20.909922"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-08-28 05:15:20.913194"], ["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$11$ThQddJ4sv/ZKkYD0CGiFIO67vP2AM8xGzr7bk0D67jTtPnb3EjUiK"], ["first_name", "Jon"], ["last_name", "Snow"], ["created_at", "2019-08-28 05:15:21.050205"], ["updated_at", "2019-08-28 05:15:21.050205"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "0 rationale content"], ["created_at", "2019-08-28 05:15:21.076382"], ["updated_at", "2019-08-28 05:15:21.076382"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "1 rationale content"], ["created_at", "2019-08-28 05:15:21.078503"], ["updated_at", "2019-08-28 05:15:21.078503"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "2 rationale content"], ["created_at", "2019-08-28 05:15:21.079793"], ["updated_at", "2019-08-28 05:15:21.079793"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "3 rationale content"], ["created_at", "2019-08-28 05:15:21.081001"], ["updated_at", "2019-08-28 05:15:21.081001"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "4 rationale content"], ["created_at", "2019-08-28 05:15:21.082319"], ["updated_at", "2019-08-28 05:15:21.082319"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "5 rationale content"], ["created_at", "2019-08-28 05:15:21.083590"], ["updated_at", "2019-08-28 05:15:21.083590"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "6 rationale content"], ["created_at", "2019-08-28 05:15:21.084813"], ["updated_at", "2019-08-28 05:15:21.084813"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "7 rationale content"], ["created_at", "2019-08-28 05:15:21.085894"], ["updated_at", "2019-08-28 05:15:21.085894"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "8 rationale content"], ["created_at", "2019-08-28 05:15:21.086936"], ["updated_at", "2019-08-28 05:15:21.086936"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "9 rationale content"], ["created_at", "2019-08-28 05:15:21.088240"], ["updated_at", "2019-08-28 05:15:21.088240"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "10 rationale content"], ["created_at", "2019-08-28 05:15:21.089750"], ["updated_at", "2019-08-28 05:15:21.089750"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "11 rationale content"], ["created_at", "2019-08-28 05:15:21.090815"], ["updated_at", "2019-08-28 05:15:21.090815"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "12 rationale content"], ["created_at", "2019-08-28 05:15:21.091928"], ["updated_at", "2019-08-28 05:15:21.091928"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "13 rationale content"], ["created_at", "2019-08-28 05:15:21.092974"], ["updated_at", "2019-08-28 05:15:21.092974"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "14 rationale content"], ["created_at", "2019-08-28 05:15:21.093902"], ["updated_at", "2019-08-28 05:15:21.093902"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "15 rationale content"], ["created_at", "2019-08-28 05:15:21.094935"], ["updated_at", "2019-08-28 05:15:21.094935"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "16 rationale content"], ["created_at", "2019-08-28 05:15:21.095967"], ["updated_at", "2019-08-28 05:15:21.095967"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "17 rationale content"], ["created_at", "2019-08-28 05:15:21.096997"], ["updated_at", "2019-08-28 05:15:21.096997"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "18 rationale content"], ["created_at", "2019-08-28 05:15:21.098022"], ["updated_at", "2019-08-28 05:15:21.098022"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "19 rationale content"], ["created_at", "2019-08-28 05:15:21.099018"], ["updated_at", "2019-08-28 05:15:21.099018"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "20 rationale content"], ["created_at", "2019-08-28 05:15:21.100081"], ["updated_at", "2019-08-28 05:15:21.100081"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "21 rationale content"], ["created_at", "2019-08-28 05:15:21.101029"], ["updated_at", "2019-08-28 05:15:21.101029"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "22 rationale content"], ["created_at", "2019-08-28 05:15:21.102074"], ["updated_at", "2019-08-28 05:15:21.102074"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "23 rationale content"], ["created_at", "2019-08-28 05:15:21.102984"], ["updated_at", "2019-08-28 05:15:21.102984"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "24 rationale content"], ["created_at", "2019-08-28 05:15:21.103972"], ["updated_at", "2019-08-28 05:15:21.103972"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "25 rationale content"], ["created_at", "2019-08-28 05:15:21.104879"], ["updated_at", "2019-08-28 05:15:21.104879"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "26 rationale content"], ["created_at", "2019-08-28 05:15:21.106229"], ["updated_at", "2019-08-28 05:15:21.106229"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "27 rationale content"], ["created_at", "2019-08-28 05:15:21.107237"], ["updated_at", "2019-08-28 05:15:21.107237"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "28 rationale content"], ["created_at", "2019-08-28 05:15:21.108293"], ["updated_at", "2019-08-28 05:15:21.108293"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "29 rationale content"], ["created_at", "2019-08-28 05:15:21.109392"], ["updated_at", "2019-08-28 05:15:21.109392"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "30 rationale content"], ["created_at", "2019-08-28 05:15:21.110476"], ["updated_at", "2019-08-28 05:15:21.110476"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "31 rationale content"], ["created_at", "2019-08-28 05:15:21.111620"], ["updated_at", "2019-08-28 05:15:21.111620"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "32 rationale content"], ["created_at", "2019-08-28 05:15:21.112843"], ["updated_at", "2019-08-28 05:15:21.112843"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "33 rationale content"], ["created_at", "2019-08-28 05:15:21.113794"], ["updated_at", "2019-08-28 05:15:21.113794"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "34 rationale content"], ["created_at", "2019-08-28 05:15:21.114740"], ["updated_at", "2019-08-28 05:15:21.114740"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "35 rationale content"], ["created_at", "2019-08-28 05:15:21.115874"], ["updated_at", "2019-08-28 05:15:21.115874"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "36 rationale content"], ["created_at", "2019-08-28 05:15:21.116857"], ["updated_at", "2019-08-28 05:15:21.116857"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "37 rationale content"], ["created_at", "2019-08-28 05:15:21.117840"], ["updated_at", "2019-08-28 05:15:21.117840"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "38 rationale content"], ["created_at", "2019-08-28 05:15:21.118854"], ["updated_at", "2019-08-28 05:15:21.118854"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "39 rationale content"], ["created_at", "2019-08-28 05:15:21.119788"], ["updated_at", "2019-08-28 05:15:21.119788"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "40 rationale content"], ["created_at", "2019-08-28 05:15:21.120732"], ["updated_at", "2019-08-28 05:15:21.120732"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "41 rationale content"], ["created_at", "2019-08-28 05:15:21.121679"], ["updated_at", "2019-08-28 05:15:21.121679"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "42 rationale content"], ["created_at", "2019-08-28 05:15:21.122759"], ["updated_at", "2019-08-28 05:15:21.122759"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "43 rationale content"], ["created_at", "2019-08-28 05:15:21.123714"], ["updated_at", "2019-08-28 05:15:21.123714"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "44 rationale content"], ["created_at", "2019-08-28 05:15:21.125291"], ["updated_at", "2019-08-28 05:15:21.125291"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "45 rationale content"], ["created_at", "2019-08-28 05:15:21.126872"], ["updated_at", "2019-08-28 05:15:21.126872"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "46 rationale content"], ["created_at", "2019-08-28 05:15:21.128356"], ["updated_at", "2019-08-28 05:15:21.128356"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "47 rationale content"], ["created_at", "2019-08-28 05:15:21.129581"], ["updated_at", "2019-08-28 05:15:21.129581"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "48 rationale content"], ["created_at", "2019-08-28 05:15:21.131161"], ["updated_at", "2019-08-28 05:15:21.131161"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "49 rationale content"], ["created_at", "2019-08-28 05:15:21.132579"], ["updated_at", "2019-08-28 05:15:21.132579"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "50 rationale content"], ["created_at", "2019-08-28 05:15:21.134151"], ["updated_at", "2019-08-28 05:15:21.134151"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "51 rationale content"], ["created_at", "2019-08-28 05:15:21.135789"], ["updated_at", "2019-08-28 05:15:21.135789"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "52 rationale content"], ["created_at", "2019-08-28 05:15:21.137235"], ["updated_at", "2019-08-28 05:15:21.137235"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "53 rationale content"], ["created_at", "2019-08-28 05:15:21.138805"], ["updated_at", "2019-08-28 05:15:21.138805"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "54 rationale content"], ["created_at", "2019-08-28 05:15:21.140533"], ["updated_at", "2019-08-28 05:15:21.140533"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "55 rationale content"], ["created_at", "2019-08-28 05:15:21.141861"], ["updated_at", "2019-08-28 05:15:21.141861"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "56 rationale content"], ["created_at", "2019-08-28 05:15:21.143067"], ["updated_at", "2019-08-28 05:15:21.143067"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "57 rationale content"], ["created_at", "2019-08-28 05:15:21.144414"], ["updated_at", "2019-08-28 05:15:21.144414"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "58 rationale content"], ["created_at", "2019-08-28 05:15:21.145837"], ["updated_at", "2019-08-28 05:15:21.145837"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "59 rationale content"], ["created_at", "2019-08-28 05:15:21.147223"], ["updated_at", "2019-08-28 05:15:21.147223"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "60 rationale content"], ["created_at", "2019-08-28 05:15:21.148760"], ["updated_at", "2019-08-28 05:15:21.148760"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "61 rationale content"], ["created_at", "2019-08-28 05:15:21.150494"], ["updated_at", "2019-08-28 05:15:21.150494"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "62 rationale content"], ["created_at", "2019-08-28 05:15:21.152100"], ["updated_at", "2019-08-28 05:15:21.152100"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "63 rationale content"], ["created_at", "2019-08-28 05:15:21.153080"], ["updated_at", "2019-08-28 05:15:21.153080"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "64 rationale content"], ["created_at", "2019-08-28 05:15:21.154757"], ["updated_at", "2019-08-28 05:15:21.154757"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "65 rationale content"], ["created_at", "2019-08-28 05:15:21.156527"], ["updated_at", "2019-08-28 05:15:21.156527"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "66 rationale content"], ["created_at", "2019-08-28 05:15:21.158088"], ["updated_at", "2019-08-28 05:15:21.158088"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "67 rationale content"], ["created_at", "2019-08-28 05:15:21.159615"], ["updated_at", "2019-08-28 05:15:21.159615"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "68 rationale content"], ["created_at", "2019-08-28 05:15:21.161141"], ["updated_at", "2019-08-28 05:15:21.161141"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "69 rationale content"], ["created_at", "2019-08-28 05:15:21.162754"], ["updated_at", "2019-08-28 05:15:21.162754"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "70 rationale content"], ["created_at", "2019-08-28 05:15:21.164401"], ["updated_at", "2019-08-28 05:15:21.164401"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "71 rationale content"], ["created_at", "2019-08-28 05:15:21.165926"], ["updated_at", "2019-08-28 05:15:21.165926"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "72 rationale content"], ["created_at", "2019-08-28 05:15:21.167576"], ["updated_at", "2019-08-28 05:15:21.167576"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "73 rationale content"], ["created_at", "2019-08-28 05:15:21.168592"], ["updated_at", "2019-08-28 05:15:21.168592"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "74 rationale content"], ["created_at", "2019-08-28 05:15:21.170186"], ["updated_at", "2019-08-28 05:15:21.170186"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "75 rationale content"], ["created_at", "2019-08-28 05:15:21.171681"], ["updated_at", "2019-08-28 05:15:21.171681"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "76 rationale content"], ["created_at", "2019-08-28 05:15:21.173325"], ["updated_at", "2019-08-28 05:15:21.173325"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "77 rationale content"], ["created_at", "2019-08-28 05:15:21.174985"], ["updated_at", "2019-08-28 05:15:21.174985"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "78 rationale content"], ["created_at", "2019-08-28 05:15:21.176635"], ["updated_at", "2019-08-28 05:15:21.176635"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "79 rationale content"], ["created_at", "2019-08-28 05:15:21.178195"], ["updated_at", "2019-08-28 05:15:21.178195"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "80 rationale content"], ["created_at", "2019-08-28 05:15:21.179774"], ["updated_at", "2019-08-28 05:15:21.179774"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "81 rationale content"], ["created_at", "2019-08-28 05:15:21.181416"], ["updated_at", "2019-08-28 05:15:21.181416"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "82 rationale content"], ["created_at", "2019-08-28 05:15:21.183005"], ["updated_at", "2019-08-28 05:15:21.183005"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "83 rationale content"], ["created_at", "2019-08-28 05:15:21.184802"], ["updated_at", "2019-08-28 05:15:21.184802"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "84 rationale content"], ["created_at", "2019-08-28 05:15:21.186454"], ["updated_at", "2019-08-28 05:15:21.186454"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "85 rationale content"], ["created_at", "2019-08-28 05:15:21.188040"], ["updated_at", "2019-08-28 05:15:21.188040"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "86 rationale content"], ["created_at", "2019-08-28 05:15:21.189118"], ["updated_at", "2019-08-28 05:15:21.189118"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "87 rationale content"], ["created_at", "2019-08-28 05:15:21.190783"], ["updated_at", "2019-08-28 05:15:21.190783"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "88 rationale content"], ["created_at", "2019-08-28 05:15:21.191806"], ["updated_at", "2019-08-28 05:15:21.191806"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "89 rationale content"], ["created_at", "2019-08-28 05:15:21.201271"], ["updated_at", "2019-08-28 05:15:21.201271"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "90 rationale content"], ["created_at", "2019-08-28 05:15:21.203501"], ["updated_at", "2019-08-28 05:15:21.203501"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "91 rationale content"], ["created_at", "2019-08-28 05:15:21.205263"], ["updated_at", "2019-08-28 05:15:21.205263"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "92 rationale content"], ["created_at", "2019-08-28 05:15:21.206728"], ["updated_at", "2019-08-28 05:15:21.206728"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "93 rationale content"], ["created_at", "2019-08-28 05:15:21.207939"], ["updated_at", "2019-08-28 05:15:21.207939"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "94 rationale content"], ["created_at", "2019-08-28 05:15:21.209047"], ["updated_at", "2019-08-28 05:15:21.209047"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "95 rationale content"], ["created_at", "2019-08-28 05:15:21.210233"], ["updated_at", "2019-08-28 05:15:21.210233"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "96 rationale content"], ["created_at", "2019-08-28 05:15:21.211381"], ["updated_at", "2019-08-28 05:15:21.211381"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "97 rationale content"], ["created_at", "2019-08-28 05:15:21.212528"], ["updated_at", "2019-08-28 05:15:21.212528"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "98 rationale content"], ["created_at", "2019-08-28 05:15:21.213996"], ["updated_at", "2019-08-28 05:15:21.213996"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", "2019-08-28"], ["rationale", "99 rationale content"], ["created_at", "2019-08-28 05:15:21.215108"], ["updated_at", "2019-08-28 05:15:21.215108"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/users" for ::1 at 2019-08-28 13:16:01 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/FX23cah3Gie4VM4Yp/YvKGsTMPTZd+wgbYvFuYQZm9k0N7hkIw819DTMZfOOkSgHCJSNMyvAgezzNCcbWnIcg==", "user"=>{"email"=>"1234@1234.com", "first_name"=>"asdasd", "last_name"=>"asdasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1234@1234.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 18.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:16:04 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/sign_in" for ::1 at 2019-08-28 13:16:52 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUgVSoyV5e/tXEJDs4VaEoDwsKdMkzTiAKzjSSC2dWmFzT122rgFUKNuIOwfIMYOPX6uUFNZ6VUy1hzDq8/bdA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 100ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUgVSoyV5e/tXEJDs4VaEoDwsKdMkzTiAKzjSSC2dWmFzT122rgFUKNuIOwfIMYOPX6uUFNZ6VUy1hzDq8/bdA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 115ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-28 13:16:58 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlRsQYhqlthcKrdEkSkgu9JOdb3qP9YZtJNlctITb6ge0UR93kd2ZxIY1es9jLynb8BrSvX1C66G6Zr4WWrBtQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 99ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlRsQYhqlthcKrdEkSkgu9JOdb3qP9YZtJNlctITb6ge0UR93kd2ZxIY1es9jLynb8BrSvX1C66G6Zr4WWrBtQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-28 13:17:32 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F5cWw3fugPEbCFxlLDTD4UhXEXHy40l4AoVQWT2vblKPEj7/IcNgTlU6PsqAkV/99dkPhu0plM8w/6/TttbATw==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 101ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2019-08-28 13:17:32 +0800
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of posts/_post.html.erb [100 times] (57.2ms)
+  Rendered posts/index.html.erb within layouts/application (65.2ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 76.0ms | ActiveRecord: 4.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-08-28 13:17:48 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ld90RIlwG15Qe9xNGHVxziQQH7ccfDMOB2Trs9p7dMdRp2Swguu9N/5hAsAmB5Ajl8wGRG4Wnes8E2I0Hs+j1g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-08-28 13:17:48 +0800
+Processing by StaticController#homepage as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:17:48 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-28 13:17:49 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:17:58 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"faKdLcePPhBeZPFgV3P/in16KOyHMZFFwG2uILGPtH6GCVY/GzYcO+MYKv5pPqkQpa7ReE0zGX9NNQMv7Hjx+A==", "user"=>{"email"=>"asdf@asdf.com", "first_name"=>"asdasd", "last_name"=>"5678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf@asdf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.3ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-08-28 13:18:56 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered collection of /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (4.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199179564240 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.7ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:19:02 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-28 13:19:05 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:19:42 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEE43Xrzl03WOCHas9PrXk28wHXucFxBKkmRWzgSWMlX6vPPpkq1ZmtE+kSNnr3ElWg54SRy1HunETxUZeUdTw==", "user"=>{"email"=>"asdf@asdf.com", "first_name"=>"asdasd", "last_name"=>"5678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf@asdf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 18.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-08-28 13:20:10 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered collection of /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (4.0ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199182694000 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.1ms)
+Started GET "/users" for ::1 at 2019-08-28 13:20:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (3.8ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199204656340 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.3ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.4ms)
+Started GET "/users" for ::1 at 2019-08-28 13:20:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered collection of /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (3.4ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.5ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__1212186197865548707_70199174971660 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.9ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.1ms)
+Started GET "/users/sign_up" for ::1 at 2019-08-28 13:20:16 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:21:32 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pSLuRa7nz2yR3EaeSJRoOIOzF6fgY91bvkcQkQjWL/BeiSVXcl7tRyygnQB22T6iW2fuMyphVWEzH72eVSFqdg==", "user"=>{"email"=>"asdf@asdf.com", "first_name"=>"asdasd", "last_name"=>"5678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf@asdf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 18.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:22:25 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E1O8x1pNhMcDDHwo9U9HPOG/rY6skSptgHomi9WmLYzo+HfVhvSm7L5wp7bLAhGmOWtUGmaTolcNIouEiFFoCg==", "user"=>{"email"=>"asdf@asdf.com", "first_name"=>"", "last_name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf@asdf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:22:28 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UJPmeglTvLYFSqHd8ARtywchOVZRTgPe3EERUwHfatqrOC1o1eqenbg2ekPOSTtR3/XAwptMi+RRGbxcXCgvXA==", "user"=>{"email"=>"", "first_name"=>"", "last_name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app/app/models/application_record.rb:1)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:23:37 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.4ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 240ms (Views: 221.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-28 13:23:40 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-28 13:23:51 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFXOTeBq8lxiMsCkkyS3NGYrpZVpb081dmAuELHOqR/r/gVfPNPQd99OGzqtaeGuvv9cAaNtxw/7OIMf7DnsmQ==", "user"=>{"email"=>"asdf@asdf.com", "first_name"=>"asdasd", "last_name"=>"5678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdf@asdf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.9ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 135ms (Views: 19.4ms | ActiveRecord: 1.1ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/app/models/application_record.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/app/models/application_record.rb:1)
+Started GET "/users" for ::1 at 2019-08-28 13:41:59 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered collection of /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (4.1ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.7ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_charizard__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__3490532894165197404_70242481427460 at /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/charizard/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.7ms)
+Started GET "/users/sign_in" for ::1 at 2019-08-28 13:42:02 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 227ms (Views: 210.0ms | ActiveRecord: 5.8ms)
+
+
