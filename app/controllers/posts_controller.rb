@@ -22,9 +22,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    authorize @post
   end
 
   def update
+    authorize @post # pundit thing
     if @post.update(post_params)
       redirect_to @post, notice: "Post was updated successfully!"
     else
