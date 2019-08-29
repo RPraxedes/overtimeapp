@@ -1,2 +1,25 @@
-<h1>Show post page</h1>
-<%= @post.inspect %>
+<h1><%= @post.rationale %></h1>
+
+
+<div class="card">
+  <div class="card-body">
+    <div class="float-right" style="margin-top: 100px">
+      <%= status_badge @post.status %>
+    </div>
+    <h5 class="card-title">
+      Overtime amount requested: <%= @post.overtime_request %> hours
+    </h5>
+    <p class="card-text">
+      Date created: <%= @post.date %>
+    </p>
+    <p class="card-text">
+      Employee: <%= @post.user.full_name %>
+    </p>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'Edit', edit_post_path(@post), id: "edit_#{@post.id}", class: "btn btn-info" if policy(@post).update? %>
+<%= link_to 'Delete', post_path(@post), method: :delete, id: "delete_post_#{@post.id}_from_index", class: "btn btn-danger" %>
+<%= link_to 'All Posts', posts_path, class: "btn btn-primary float-right" %>
