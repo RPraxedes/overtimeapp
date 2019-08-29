@@ -25,6 +25,17 @@ describe 'navigate' do
       visit posts_path
       expect(page).to have_content(/first|second/)
     end
+
+    it 'has a scope so users only see their posts' do
+      post1 = FactoryGirl.create(:post)
+      post2 = FactoryGirl.create(:second_post)
+
+      other_user = FactoryGirl.create(:unauthorized_user)
+      post_from_others = Post.create(date: Date.today, rationale: "This post shouldn't be seen", user_id: other_user.id)
+      visit posts_path
+
+      expect(page).to_not have_content(/This post shouldn't be seen/)
+    end
   end
 
   describe 'creation' do
@@ -54,27 +65,37 @@ describe 'navigate' do
 
   describe 'edit' do
     before do
+      logout(:user)
+      @test_user = User.create(first_name: "test", last_name: "user",
+        email: "testuser@user.com", password: "password", password_confirmation: "password")
+      login_as(@test_user, :scope => :user)
+      @test_post = Post.create(date: Date.today, rationale: "asdfasdf", user_id: @test_user.id)
       @post = FactoryGirl.create(:post)
     end
 
-    it 'can be reached by button in index' do
-      visit posts_path
-      click_link "edit_#{@post.id}"
-      expect(page.status_code).to eq(200)
-    end
-
     it 'can be edited' do
-      visit edit_post_path(@post)
+      visit edit_post_path(@test_post)
+
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "Some edited rationale"
       click_on "Save"
       expect(page).to have_content("Some edited rationale")
+    end
+
+    it 'cannot be edited by an unauthorized user' do
+      logout(:user)
+      unauthorized_user = FactoryGirl.create(:unauthorized_user)
+      login_as(unauthorized_user, :scope => :user)
+
+      visit edit_post_path(@test_post)
+      expect(current_path).to eq(posts_path)
     end
   end
 
   describe 'delete' do
     it 'can be deleted' do
       @post = FactoryGirl.create(:post)
+      @post.update(user_id: @user_id)
       visit posts_path
 
       click_link("delete_post_#{@post.id}_from_index")
