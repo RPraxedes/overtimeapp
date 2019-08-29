@@ -1,11 +1,14 @@
  require 'rails_helper'
 
 describe 'navigate' do
+  let(:user) { FactoryGirl.create(:user) }
+
+  let(:post) do
+    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id)
+  end
   before do
-    @user = FactoryGirl.create(:user)
     login_as(@user, :scope => :user)
   end
-
   describe 'index' do
     before do
       visit posts_path
@@ -13,10 +16,6 @@ describe 'navigate' do
 
     it 'can be reached successfully' do
       expect(page.status_code).to eq(200)
-    end
-
-    it 'has a title of Posts' do
-      expect(page).to have_content(/Posts/)
     end
 
     it 'has a list of posts' do
@@ -27,11 +26,7 @@ describe 'navigate' do
     end
 
     it 'has a scope so users only see their posts' do
-      post1 = FactoryGirl.create(:post)
-      post2 = FactoryGirl.create(:second_post)
-
       other_user = FactoryGirl.create(:unauthorized_user)
-      post_from_others = Post.create(date: Date.today, rationale: "This post shouldn't be seen", user_id: other_user.id)
       visit posts_path
 
       expect(page).to_not have_content(/This post shouldn't be seen/)
@@ -74,7 +69,7 @@ describe 'navigate' do
     end
 
     it 'can be edited' do
-      visit edit_post_path(@test_post)
+      visit edit_post_path(post)
 
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "Some edited rationale"
