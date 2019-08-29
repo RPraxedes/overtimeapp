@@ -4,7 +4,7 @@ describe 'navigate' do
   let(:user) { FactoryGirl.create(:user) }
 
   let(:post) do
-    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id)
+    Post.create(date: Date.today, rationale: "Rationale", user_id: user.id, overtime_request: 2.5)
   end
   before do
     login_as(@user, :scope => :user)
