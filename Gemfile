@@ -30,3 +30,4 @@ gem "gritter", "1.2.0"
 gem 'puma', '~> 3.4'
 gem 'administrate'
 gem 'bourbon'
+gem 'pundit'
