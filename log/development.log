@@ -23729,3 +23729,774 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7795632052394862690)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/charizard/Documents/overtime-app-2/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.8ms)[0m  [1m[35mDROP TABLE "audit_logs" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "audit_logs" ("id" serial primary key, "user_id" integer, "status" integer DEFAULT 0, "start_date" date, "end_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_audit_logs_on_user_id" ON "audit_logs" USING btree ("user_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "posts" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "date" date, "rationale" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer, "status" integer DEFAULT 0, "overtime_request" decimal DEFAULT '0.0')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts" USING btree ("user_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "first_name" character varying, "last_name" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "audit_logs" ADD CONSTRAINT "fk_rails_1f26bc34ae"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.3ms)[0m  [1m[35mDROP TABLE "audit_logs" CASCADE[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "audit_logs" ("id" serial primary key, "user_id" integer, "status" integer DEFAULT 0, "start_date" date, "end_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_audit_logs_on_user_id" ON "audit_logs" USING btree ("user_id")[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE "posts" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "date" date, "rationale" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer, "status" integer DEFAULT 0, "overtime_request" decimal DEFAULT '0.0')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts" USING btree ("user_id")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mDROP TABLE "users" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "first_name" character varying, "last_name" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "audit_logs" ADD CONSTRAINT "fk_rails_1f26bc34ae"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190830032303)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-08-30 04:20:22.183047"], ["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-08-30 04:20:22.185661"], ["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$11$EMydJ/LZln9TL5RP/d4sc.ggBk2Hzb1I.3AC.FB55CpjWbGKfhW0i"], ["first_name", "Jon"], ["last_name", "Snow"], ["created_at", "2019-08-30 04:20:22.333346"], ["updated_at", "2019-08-30 04:20:22.333346"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "first_name", "last_name", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "admin@test.com"], ["encrypted_password", "$2a$11$/XkS3cPMCgFQl1buqKZzxemd6rafdlUsv3RbJzmasjVTWJo9mzsde"], ["first_name", "Admin"], ["last_name", "User"], ["type", "AdminUser"], ["created_at", "2019-08-30 04:20:22.441800"], ["updated_at", "2019-08-30 04:20:22.441800"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "0 rationale content"], ["created_at", "2019-08-30 04:20:22.458650"], ["updated_at", "2019-08-30 04:20:22.458650"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "1 rationale content"], ["created_at", "2019-08-30 04:20:22.463796"], ["updated_at", "2019-08-30 04:20:22.463796"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "2 rationale content"], ["created_at", "2019-08-30 04:20:22.465515"], ["updated_at", "2019-08-30 04:20:22.465515"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "3 rationale content"], ["created_at", "2019-08-30 04:20:22.466918"], ["updated_at", "2019-08-30 04:20:22.466918"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "4 rationale content"], ["created_at", "2019-08-30 04:20:22.468186"], ["updated_at", "2019-08-30 04:20:22.468186"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "5 rationale content"], ["created_at", "2019-08-30 04:20:22.469465"], ["updated_at", "2019-08-30 04:20:22.469465"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "6 rationale content"], ["created_at", "2019-08-30 04:20:22.470821"], ["updated_at", "2019-08-30 04:20:22.470821"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "7 rationale content"], ["created_at", "2019-08-30 04:20:22.472436"], ["updated_at", "2019-08-30 04:20:22.472436"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "8 rationale content"], ["created_at", "2019-08-30 04:20:22.473847"], ["updated_at", "2019-08-30 04:20:22.473847"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "9 rationale content"], ["created_at", "2019-08-30 04:20:22.475058"], ["updated_at", "2019-08-30 04:20:22.475058"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "10 rationale content"], ["created_at", "2019-08-30 04:20:22.476391"], ["updated_at", "2019-08-30 04:20:22.476391"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "11 rationale content"], ["created_at", "2019-08-30 04:20:22.477878"], ["updated_at", "2019-08-30 04:20:22.477878"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "12 rationale content"], ["created_at", "2019-08-30 04:20:22.479043"], ["updated_at", "2019-08-30 04:20:22.479043"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "13 rationale content"], ["created_at", "2019-08-30 04:20:22.480147"], ["updated_at", "2019-08-30 04:20:22.480147"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "14 rationale content"], ["created_at", "2019-08-30 04:20:22.481211"], ["updated_at", "2019-08-30 04:20:22.481211"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "15 rationale content"], ["created_at", "2019-08-30 04:20:22.482262"], ["updated_at", "2019-08-30 04:20:22.482262"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "16 rationale content"], ["created_at", "2019-08-30 04:20:22.483311"], ["updated_at", "2019-08-30 04:20:22.483311"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "17 rationale content"], ["created_at", "2019-08-30 04:20:22.484350"], ["updated_at", "2019-08-30 04:20:22.484350"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "18 rationale content"], ["created_at", "2019-08-30 04:20:22.485382"], ["updated_at", "2019-08-30 04:20:22.485382"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "19 rationale content"], ["created_at", "2019-08-30 04:20:22.486425"], ["updated_at", "2019-08-30 04:20:22.486425"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "20 rationale content"], ["created_at", "2019-08-30 04:20:22.487463"], ["updated_at", "2019-08-30 04:20:22.487463"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "21 rationale content"], ["created_at", "2019-08-30 04:20:22.495391"], ["updated_at", "2019-08-30 04:20:22.495391"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "22 rationale content"], ["created_at", "2019-08-30 04:20:22.496748"], ["updated_at", "2019-08-30 04:20:22.496748"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "23 rationale content"], ["created_at", "2019-08-30 04:20:22.498022"], ["updated_at", "2019-08-30 04:20:22.498022"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "24 rationale content"], ["created_at", "2019-08-30 04:20:22.499332"], ["updated_at", "2019-08-30 04:20:22.499332"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "25 rationale content"], ["created_at", "2019-08-30 04:20:22.500558"], ["updated_at", "2019-08-30 04:20:22.500558"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "26 rationale content"], ["created_at", "2019-08-30 04:20:22.501783"], ["updated_at", "2019-08-30 04:20:22.501783"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "27 rationale content"], ["created_at", "2019-08-30 04:20:22.503129"], ["updated_at", "2019-08-30 04:20:22.503129"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "28 rationale content"], ["created_at", "2019-08-30 04:20:22.504443"], ["updated_at", "2019-08-30 04:20:22.504443"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "29 rationale content"], ["created_at", "2019-08-30 04:20:22.505871"], ["updated_at", "2019-08-30 04:20:22.505871"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "30 rationale content"], ["created_at", "2019-08-30 04:20:22.507257"], ["updated_at", "2019-08-30 04:20:22.507257"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "31 rationale content"], ["created_at", "2019-08-30 04:20:22.508516"], ["updated_at", "2019-08-30 04:20:22.508516"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "32 rationale content"], ["created_at", "2019-08-30 04:20:22.509810"], ["updated_at", "2019-08-30 04:20:22.509810"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "33 rationale content"], ["created_at", "2019-08-30 04:20:22.511020"], ["updated_at", "2019-08-30 04:20:22.511020"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "34 rationale content"], ["created_at", "2019-08-30 04:20:22.512267"], ["updated_at", "2019-08-30 04:20:22.512267"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "35 rationale content"], ["created_at", "2019-08-30 04:20:22.513427"], ["updated_at", "2019-08-30 04:20:22.513427"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "36 rationale content"], ["created_at", "2019-08-30 04:20:22.514564"], ["updated_at", "2019-08-30 04:20:22.514564"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "37 rationale content"], ["created_at", "2019-08-30 04:20:22.515808"], ["updated_at", "2019-08-30 04:20:22.515808"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "38 rationale content"], ["created_at", "2019-08-30 04:20:22.516942"], ["updated_at", "2019-08-30 04:20:22.516942"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "39 rationale content"], ["created_at", "2019-08-30 04:20:22.518072"], ["updated_at", "2019-08-30 04:20:22.518072"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "40 rationale content"], ["created_at", "2019-08-30 04:20:22.519237"], ["updated_at", "2019-08-30 04:20:22.519237"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "41 rationale content"], ["created_at", "2019-08-30 04:20:22.520402"], ["updated_at", "2019-08-30 04:20:22.520402"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "42 rationale content"], ["created_at", "2019-08-30 04:20:22.521640"], ["updated_at", "2019-08-30 04:20:22.521640"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "43 rationale content"], ["created_at", "2019-08-30 04:20:22.522956"], ["updated_at", "2019-08-30 04:20:22.522956"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "44 rationale content"], ["created_at", "2019-08-30 04:20:22.524120"], ["updated_at", "2019-08-30 04:20:22.524120"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "45 rationale content"], ["created_at", "2019-08-30 04:20:22.525221"], ["updated_at", "2019-08-30 04:20:22.525221"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "46 rationale content"], ["created_at", "2019-08-30 04:20:22.526347"], ["updated_at", "2019-08-30 04:20:22.526347"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "47 rationale content"], ["created_at", "2019-08-30 04:20:22.527409"], ["updated_at", "2019-08-30 04:20:22.527409"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "48 rationale content"], ["created_at", "2019-08-30 04:20:22.528538"], ["updated_at", "2019-08-30 04:20:22.528538"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "49 rationale content"], ["created_at", "2019-08-30 04:20:22.529678"], ["updated_at", "2019-08-30 04:20:22.529678"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "50 rationale content"], ["created_at", "2019-08-30 04:20:22.530741"], ["updated_at", "2019-08-30 04:20:22.530741"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "51 rationale content"], ["created_at", "2019-08-30 04:20:22.531835"], ["updated_at", "2019-08-30 04:20:22.531835"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "52 rationale content"], ["created_at", "2019-08-30 04:20:22.532966"], ["updated_at", "2019-08-30 04:20:22.532966"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "53 rationale content"], ["created_at", "2019-08-30 04:20:22.534112"], ["updated_at", "2019-08-30 04:20:22.534112"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "54 rationale content"], ["created_at", "2019-08-30 04:20:22.535171"], ["updated_at", "2019-08-30 04:20:22.535171"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "55 rationale content"], ["created_at", "2019-08-30 04:20:22.536311"], ["updated_at", "2019-08-30 04:20:22.536311"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "56 rationale content"], ["created_at", "2019-08-30 04:20:22.537418"], ["updated_at", "2019-08-30 04:20:22.537418"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "57 rationale content"], ["created_at", "2019-08-30 04:20:22.538567"], ["updated_at", "2019-08-30 04:20:22.538567"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "58 rationale content"], ["created_at", "2019-08-30 04:20:22.539675"], ["updated_at", "2019-08-30 04:20:22.539675"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "59 rationale content"], ["created_at", "2019-08-30 04:20:22.540939"], ["updated_at", "2019-08-30 04:20:22.540939"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "60 rationale content"], ["created_at", "2019-08-30 04:20:22.542100"], ["updated_at", "2019-08-30 04:20:22.542100"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "61 rationale content"], ["created_at", "2019-08-30 04:20:22.543212"], ["updated_at", "2019-08-30 04:20:22.543212"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "62 rationale content"], ["created_at", "2019-08-30 04:20:22.544350"], ["updated_at", "2019-08-30 04:20:22.544350"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "63 rationale content"], ["created_at", "2019-08-30 04:20:22.546203"], ["updated_at", "2019-08-30 04:20:22.546203"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "64 rationale content"], ["created_at", "2019-08-30 04:20:22.547971"], ["updated_at", "2019-08-30 04:20:22.547971"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "65 rationale content"], ["created_at", "2019-08-30 04:20:22.550460"], ["updated_at", "2019-08-30 04:20:22.550460"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "66 rationale content"], ["created_at", "2019-08-30 04:20:22.552470"], ["updated_at", "2019-08-30 04:20:22.552470"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "67 rationale content"], ["created_at", "2019-08-30 04:20:22.554393"], ["updated_at", "2019-08-30 04:20:22.554393"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "68 rationale content"], ["created_at", "2019-08-30 04:20:22.556490"], ["updated_at", "2019-08-30 04:20:22.556490"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "69 rationale content"], ["created_at", "2019-08-30 04:20:22.558261"], ["updated_at", "2019-08-30 04:20:22.558261"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "70 rationale content"], ["created_at", "2019-08-30 04:20:22.559997"], ["updated_at", "2019-08-30 04:20:22.559997"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "71 rationale content"], ["created_at", "2019-08-30 04:20:22.561682"], ["updated_at", "2019-08-30 04:20:22.561682"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "72 rationale content"], ["created_at", "2019-08-30 04:20:22.564377"], ["updated_at", "2019-08-30 04:20:22.564377"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "73 rationale content"], ["created_at", "2019-08-30 04:20:22.566191"], ["updated_at", "2019-08-30 04:20:22.566191"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "74 rationale content"], ["created_at", "2019-08-30 04:20:22.567883"], ["updated_at", "2019-08-30 04:20:22.567883"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "75 rationale content"], ["created_at", "2019-08-30 04:20:22.569653"], ["updated_at", "2019-08-30 04:20:22.569653"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "76 rationale content"], ["created_at", "2019-08-30 04:20:22.571412"], ["updated_at", "2019-08-30 04:20:22.571412"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "77 rationale content"], ["created_at", "2019-08-30 04:20:22.573352"], ["updated_at", "2019-08-30 04:20:22.573352"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "78 rationale content"], ["created_at", "2019-08-30 04:20:22.575148"], ["updated_at", "2019-08-30 04:20:22.575148"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "79 rationale content"], ["created_at", "2019-08-30 04:20:22.577621"], ["updated_at", "2019-08-30 04:20:22.577621"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "80 rationale content"], ["created_at", "2019-08-30 04:20:22.579510"], ["updated_at", "2019-08-30 04:20:22.579510"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "81 rationale content"], ["created_at", "2019-08-30 04:20:22.581407"], ["updated_at", "2019-08-30 04:20:22.581407"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "82 rationale content"], ["created_at", "2019-08-30 04:20:22.583540"], ["updated_at", "2019-08-30 04:20:22.583540"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "83 rationale content"], ["created_at", "2019-08-30 04:20:22.585334"], ["updated_at", "2019-08-30 04:20:22.585334"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "84 rationale content"], ["created_at", "2019-08-30 04:20:22.587222"], ["updated_at", "2019-08-30 04:20:22.587222"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "85 rationale content"], ["created_at", "2019-08-30 04:20:22.589293"], ["updated_at", "2019-08-30 04:20:22.589293"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "86 rationale content"], ["created_at", "2019-08-30 04:20:22.592161"], ["updated_at", "2019-08-30 04:20:22.592161"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "87 rationale content"], ["created_at", "2019-08-30 04:20:22.593876"], ["updated_at", "2019-08-30 04:20:22.593876"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "88 rationale content"], ["created_at", "2019-08-30 04:20:22.595544"], ["updated_at", "2019-08-30 04:20:22.595544"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "89 rationale content"], ["created_at", "2019-08-30 04:20:22.597644"], ["updated_at", "2019-08-30 04:20:22.597644"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "90 rationale content"], ["created_at", "2019-08-30 04:20:22.599432"], ["updated_at", "2019-08-30 04:20:22.599432"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "91 rationale content"], ["created_at", "2019-08-30 04:20:22.601158"], ["updated_at", "2019-08-30 04:20:22.601158"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "92 rationale content"], ["created_at", "2019-08-30 04:20:22.602884"], ["updated_at", "2019-08-30 04:20:22.602884"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "93 rationale content"], ["created_at", "2019-08-30 04:20:22.604628"], ["updated_at", "2019-08-30 04:20:22.604628"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "94 rationale content"], ["created_at", "2019-08-30 04:20:22.607416"], ["updated_at", "2019-08-30 04:20:22.607416"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "95 rationale content"], ["created_at", "2019-08-30 04:20:22.609655"], ["updated_at", "2019-08-30 04:20:22.609655"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "96 rationale content"], ["created_at", "2019-08-30 04:20:22.612738"], ["updated_at", "2019-08-30 04:20:22.612738"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "97 rationale content"], ["created_at", "2019-08-30 04:20:22.615038"], ["updated_at", "2019-08-30 04:20:22.615038"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "98 rationale content"], ["created_at", "2019-08-30 04:20:22.617094"], ["updated_at", "2019-08-30 04:20:22.617094"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("date", "rationale", "created_at", "updated_at", "user_id", "overtime_request") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-08-30"], ["rationale", "99 rationale content"], ["created_at", "2019-08-30 04:20:22.619020"], ["updated_at", "2019-08-30 04:20:22.619020"], ["user_id", 1], ["overtime_request", "2.5"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.638240"], ["updated_at", "2019-08-30 04:20:22.638240"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.641092"], ["updated_at", "2019-08-30 04:20:22.641092"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.643079"], ["updated_at", "2019-08-30 04:20:22.643079"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.645108"], ["updated_at", "2019-08-30 04:20:22.645108"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.646943"], ["updated_at", "2019-08-30 04:20:22.646943"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.648515"], ["updated_at", "2019-08-30 04:20:22.648515"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.649909"], ["updated_at", "2019-08-30 04:20:22.649909"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.651237"], ["updated_at", "2019-08-30 04:20:22.651237"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.652602"], ["updated_at", "2019-08-30 04:20:22.652602"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.653932"], ["updated_at", "2019-08-30 04:20:22.653932"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.655495"], ["updated_at", "2019-08-30 04:20:22.655495"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.657187"], ["updated_at", "2019-08-30 04:20:22.657187"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.658582"], ["updated_at", "2019-08-30 04:20:22.658582"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.659916"], ["updated_at", "2019-08-30 04:20:22.659916"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.661252"], ["updated_at", "2019-08-30 04:20:22.661252"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.662796"], ["updated_at", "2019-08-30 04:20:22.662796"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.664096"], ["updated_at", "2019-08-30 04:20:22.664096"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.665412"], ["updated_at", "2019-08-30 04:20:22.665412"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.666671"], ["updated_at", "2019-08-30 04:20:22.666671"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.667996"], ["updated_at", "2019-08-30 04:20:22.667996"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.669231"], ["updated_at", "2019-08-30 04:20:22.669231"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.670539"], ["updated_at", "2019-08-30 04:20:22.670539"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.671905"], ["updated_at", "2019-08-30 04:20:22.671905"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.673439"], ["updated_at", "2019-08-30 04:20:22.673439"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.674845"], ["updated_at", "2019-08-30 04:20:22.674845"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.676183"], ["updated_at", "2019-08-30 04:20:22.676183"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.677526"], ["updated_at", "2019-08-30 04:20:22.677526"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.678903"], ["updated_at", "2019-08-30 04:20:22.678903"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.680229"], ["updated_at", "2019-08-30 04:20:22.680229"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.681510"], ["updated_at", "2019-08-30 04:20:22.681510"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.682830"], ["updated_at", "2019-08-30 04:20:22.682830"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.684124"], ["updated_at", "2019-08-30 04:20:22.684124"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.685430"], ["updated_at", "2019-08-30 04:20:22.685430"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.686730"], ["updated_at", "2019-08-30 04:20:22.686730"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.688153"], ["updated_at", "2019-08-30 04:20:22.688153"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.689716"], ["updated_at", "2019-08-30 04:20:22.689716"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.691234"], ["updated_at", "2019-08-30 04:20:22.691234"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.692701"], ["updated_at", "2019-08-30 04:20:22.692701"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.694010"], ["updated_at", "2019-08-30 04:20:22.694010"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.695432"], ["updated_at", "2019-08-30 04:20:22.695432"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.696886"], ["updated_at", "2019-08-30 04:20:22.696886"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.698229"], ["updated_at", "2019-08-30 04:20:22.698229"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.699539"], ["updated_at", "2019-08-30 04:20:22.699539"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.700930"], ["updated_at", "2019-08-30 04:20:22.700930"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.702281"], ["updated_at", "2019-08-30 04:20:22.702281"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.703659"], ["updated_at", "2019-08-30 04:20:22.703659"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.705112"], ["updated_at", "2019-08-30 04:20:22.705112"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.706664"], ["updated_at", "2019-08-30 04:20:22.706664"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.708161"], ["updated_at", "2019-08-30 04:20:22.708161"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.709583"], ["updated_at", "2019-08-30 04:20:22.709583"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.711004"], ["updated_at", "2019-08-30 04:20:22.711004"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.712463"], ["updated_at", "2019-08-30 04:20:22.712463"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.713876"], ["updated_at", "2019-08-30 04:20:22.713876"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.715285"], ["updated_at", "2019-08-30 04:20:22.715285"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.716676"], ["updated_at", "2019-08-30 04:20:22.716676"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.718060"], ["updated_at", "2019-08-30 04:20:22.718060"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.719450"], ["updated_at", "2019-08-30 04:20:22.719450"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.720875"], ["updated_at", "2019-08-30 04:20:22.720875"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.722633"], ["updated_at", "2019-08-30 04:20:22.722633"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.724173"], ["updated_at", "2019-08-30 04:20:22.724173"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.725618"], ["updated_at", "2019-08-30 04:20:22.725618"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.727149"], ["updated_at", "2019-08-30 04:20:22.727149"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.728726"], ["updated_at", "2019-08-30 04:20:22.728726"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.730254"], ["updated_at", "2019-08-30 04:20:22.730254"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.731650"], ["updated_at", "2019-08-30 04:20:22.731650"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.733046"], ["updated_at", "2019-08-30 04:20:22.733046"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.734397"], ["updated_at", "2019-08-30 04:20:22.734397"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.735657"], ["updated_at", "2019-08-30 04:20:22.735657"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.736993"], ["updated_at", "2019-08-30 04:20:22.736993"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.738577"], ["updated_at", "2019-08-30 04:20:22.738577"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.740146"], ["updated_at", "2019-08-30 04:20:22.740146"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.741566"], ["updated_at", "2019-08-30 04:20:22.741566"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.742931"], ["updated_at", "2019-08-30 04:20:22.742931"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.744279"], ["updated_at", "2019-08-30 04:20:22.744279"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.745694"], ["updated_at", "2019-08-30 04:20:22.745694"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.747047"], ["updated_at", "2019-08-30 04:20:22.747047"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.748355"], ["updated_at", "2019-08-30 04:20:22.748355"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.749655"], ["updated_at", "2019-08-30 04:20:22.749655"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.750950"], ["updated_at", "2019-08-30 04:20:22.750950"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.752302"], ["updated_at", "2019-08-30 04:20:22.752302"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.753631"], ["updated_at", "2019-08-30 04:20:22.753631"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.755111"], ["updated_at", "2019-08-30 04:20:22.755111"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.756702"], ["updated_at", "2019-08-30 04:20:22.756702"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.758109"], ["updated_at", "2019-08-30 04:20:22.758109"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.759471"], ["updated_at", "2019-08-30 04:20:22.759471"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.760886"], ["updated_at", "2019-08-30 04:20:22.760886"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.762389"], ["updated_at", "2019-08-30 04:20:22.762389"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.763777"], ["updated_at", "2019-08-30 04:20:22.763777"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.765105"], ["updated_at", "2019-08-30 04:20:22.765105"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.766465"], ["updated_at", "2019-08-30 04:20:22.766465"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.767796"], ["updated_at", "2019-08-30 04:20:22.767796"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.769134"], ["updated_at", "2019-08-30 04:20:22.769134"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.770481"], ["updated_at", "2019-08-30 04:20:22.770481"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.771939"], ["updated_at", "2019-08-30 04:20:22.771939"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.773380"], ["updated_at", "2019-08-30 04:20:22.773380"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.774784"], ["updated_at", "2019-08-30 04:20:22.774784"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.776200"], ["updated_at", "2019-08-30 04:20:22.776200"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.777582"], ["updated_at", "2019-08-30 04:20:22.777582"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.779011"], ["updated_at", "2019-08-30 04:20:22.779011"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "audit_logs" ("user_id", "start_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["start_date", "2019-08-24"], ["created_at", "2019-08-30 04:20:22.780434"], ["updated_at", "2019-08-30 04:20:22.780434"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
