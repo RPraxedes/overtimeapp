@@ -1,0 +1,24 @@
+<% @pending_approvals.each do |pending| %>
+<div class="card pending-overtime-approvals col-md-3">
+  <div class="card-header bg-secondary text-light">
+    <strong><%= pending.user.full_name %></strong>
+  </div>
+  <div class="card-body">
+    <p class="text-muted"><small>
+     Submitted on <%= pending.date.strftime("%B %d, %Y") %>
+    </small></p>
+    <h6>Rationale</h6>
+    <p class="card-text">
+      <%= truncate pending.rationale %>
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="float-right">
+      <%= link_to fa_icon("check"), root_path, class: "action-icon text-success" %>
+    </div>
+    <div class="float-left">
+      <%= link_to fa_icon("times"), root_path, class: "action-icon text-danger" %>
+    </div>
+  </div>
+</div>
+<% end %>
