@@ -277,6 +277,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   json (~> 1.8.3)
+  kaminari
   pg (~> 0.15)
   puma (~> 3.4)
   pundit

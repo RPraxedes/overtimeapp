@@ -33,3 +33,4 @@ gem 'bourbon'
 gem 'pundit'
 gem 'font-awesome-rails'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'kaminari'
