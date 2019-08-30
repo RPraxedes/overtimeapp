@@ -85,7 +85,7 @@ describe 'navigate' do
       login_as(unauthorized_user, :scope => :user)
 
       visit edit_post_path(@test_post)
-      expect(current_path).to eq(posts_path)
+      expect(current_path).to eq(root_path)
     end
   end
 
