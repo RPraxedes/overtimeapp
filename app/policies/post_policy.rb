@@ -6,6 +6,10 @@ class PostPolicy < ApplicationPolicy
     # Case2 = admin user
   end
 
+  def approve?
+    admin?
+  end
+
   private
 
     def user_or_admin

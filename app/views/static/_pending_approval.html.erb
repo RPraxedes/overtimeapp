@@ -14,10 +14,10 @@
   </div>
   <div class="card-footer">
     <div class="float-right">
-      <%= link_to fa_icon("check"), root_path, class: "action-icon text-success" %>
+      <%= link_to fa_icon("check"), approve_post_path(pending), class: "action-icon text-success", id: "approve_#{pending.id}" %>
     </div>
     <div class="float-left">
-      <%= link_to fa_icon("times"), root_path, class: "action-icon text-danger" %>
+      <%= link_to fa_icon("edit"), edit_post_path(pending), class: "action-icon text-info" %>
     </div>
   </div>
 </div>

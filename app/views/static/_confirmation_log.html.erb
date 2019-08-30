@@ -1,0 +1,17 @@
+<% @recent_audit_items.each do |item| %>
+<div class="card pending-submissions col-md-3">
+  <div class="card-header bg-secondary text-light">
+    <strong><%= item.user.full_name %></strong>
+    <div class="float-right">
+      <%= status_badge item.status %>
+    </div>
+  </div>
+  <div class="card-body">
+
+    <p class="card-text">
+      Week starting on <%= item.start_date.strftime("%B %d, %Y") %>
+      <%= "Confirmed on #{item.end_date.strftime("%B %d, %Y")}" if item.end_date %>
+    </p>
+  </div>
+</div>
+<% end %>

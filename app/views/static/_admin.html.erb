@@ -8,7 +8,11 @@
   <%= render partial: 'pending_approval', locals: { pending_approvals: @pending_approvals } %>
 </div>
 
-
-<div class=" card pending-submissions">
-
+<div class="row">
+  <h3>Confirmation Log</h3>
 </div>
+<div class="row justify-content-center">
+  <%= render partial: 'confirmation_log', locals: { recent_audit_items: @recent_audit_items } %>
+</div>
+
+<%= link_to 'View All Items', audit_logs_path, class: "btn btn-primary" %>
