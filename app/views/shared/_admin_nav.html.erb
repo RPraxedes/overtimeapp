@@ -1,0 +1,10 @@
+<li class="nav-item dropdown">
+   <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Account</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <% if current_user.type == 'AdminUser' %>
+      <%= link_to "Admin Dashboard", admin_root_path, class: "dropdown-item" %>
+      <div class="dropdown-divider"></div>
+    <% end %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+  </div>
+</li>

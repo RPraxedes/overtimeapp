@@ -9,26 +9,12 @@
          <%= link_to "Home", root_path, class: "nav-link" %>
       </li>
       <% if current_user %>
-        <li class="nav-item <%= active?(posts_path) %>">
-          <%= link_to "Time Entries", posts_path, class: "nav-link" %>
-        </li>
+        <%= render 'shared/employee_nav' if employee? %>
+
         <%= render 'shared/audit_log_section' if policy(AuditLog).index? %>
-        <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Account</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <% if current_user.type == 'AdminUser' %>
-              <%= link_to "Admin Dashboard", admin_root_path, class: "dropdown-item" %>
-              <div class="dropdown-divider"></div>
-            <% end %>
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-md-auto">
-        <li class="nav-item <%= active?(new_post_path) %>">
-           <%= link_to "Request Overtime", new_post_path, class: "nav-link" %>
-        </li>
-      </ul>
+        <%= render 'shared/admin_nav' if admin? %>
+    </ul>
+
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="text" />
       <button class="btn btn-primary my-2 my-sm-0" type="submit">
