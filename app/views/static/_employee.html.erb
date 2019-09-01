@@ -10,7 +10,8 @@
   <div class="col-md-6">
     <div class="row justify-content-center">
       <div class="col-md-11 jumbotron">
-
+        <h4>Pending Your Confirmation</h4>
+        <%= render partial: 'pending_audit_confirmations', locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
       </div>
     </div>
   </div>

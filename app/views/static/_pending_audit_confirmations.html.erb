@@ -1,0 +1,4 @@
+<% pending_audit_confirmations.each do |audit| %>
+  <%= link_to "Confirm that there is no overtime for the week of: #{audit.start_date.strftime("%B %d, %Y")}", "#", class: "btn btn-primary btn-lg",
+  data:  {confirm: "Are you sure you did not perform overtime?" } %>
+<% end %>
