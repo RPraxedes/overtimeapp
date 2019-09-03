@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'rubocop-performance'
 
 group :development, :test do
   gem 'byebug'
@@ -17,6 +18,8 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.7'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
 
 group :development do
