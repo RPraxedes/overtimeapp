@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :audit_logs, except: [:new, :edit, :destroy] do
+  resources :audit_logs, except: %i[new edit destroy] do
     member do
       get :confirm
     end
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :admin_users
     resources :employees
 
-    root to: "users#index"
+    root to: 'users#index'
   end
 
   resources :posts do
@@ -19,6 +19,6 @@ Rails.application.routes.draw do
     end
   end
   devise_for :users, skip: [:registration]
-  root to: "static#homepage"
+  root to: 'static#homepage'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
