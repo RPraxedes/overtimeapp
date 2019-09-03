@@ -4,9 +4,11 @@
     <strong><%= pending.user.full_name %></strong>
   </div>
   <div class="card-body">
-    <p class="text-muted"><small>
+    <p class="text-muted">
+      <small>
      Submitted on <%= pending.date.strftime("%B %d, %Y") %>
-    </small></p>
+      </small>
+    </p>
     <h6>Rationale</h6>
     <p class="card-text">
       <%= truncate pending.rationale %>
