@@ -27,7 +27,7 @@ group :development do
   gem 'spring'
 end
 
-gem 'devise', '~> 4.2'
+gem 'devise', '~> 4.7'
 gem 'bootstrap', '~> 4.3.1'
 gem "gritter", "1.2.0"
 gem 'puma', '~> 3.4'
