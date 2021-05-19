@@ -30,7 +30,7 @@ end
 gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.3.1'
 gem "gritter", "1.2.0"
-gem 'puma', '~> 3.4'
+gem 'puma', '~> 4.3'
 gem 'administrate'
 gem 'bourbon'
 gem 'pundit'
